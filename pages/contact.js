@@ -24,7 +24,7 @@ export const Contact = () => {
                 <h1 className="text-6xl">Contact</h1>
                 <p className="text-gray-500 pt-10 font-mono">
                   👋 Hey Everyone! I&apos;m Om singh a website developer.<br/>
-                  As a MERN Stack Developer, I bring 1.5 years of web development experience in the MERN stack - MongoDB, Express.js, React, Node.js. Throughout my journey, I've contributed to various projects for both personal endeavors and corporate clients, showcasing my expertise in creating dynamic and user-friendly applications. check out my projects in project section.
+                  As a MERN Stack Developer, I bring 1.5 years of web development experience in the MERN stack - MongoDB, Express.js, React, Node.js. Throughout my journey, I have contributed to various projects for both personal endeavors and corporate clients, showcasing my expertise in creating dynamic and user-friendly applications. check out my projects in project section.
 
 In addition to my development skills, I founded a startup, providing me with valuable insights into the entrepreneurial world. Despite resource limitations, I successfully navigated challenges, including developing applications in React Native.
                   <br />
