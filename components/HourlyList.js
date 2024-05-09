@@ -6,27 +6,27 @@ import Image from "next/image";
 export const HourlyList = ({hourlyWeather}) => {
   return (
     <>
-      <div  style={{backgroundColor:"white",height:"300px", width:"80%", margin:"auto", borderRadius:'30px', padding:"10px"}}>
-        <p className="font-bold pl-2">Weather</p>
+      <div className="pd-4" style={{backgroundColor:"white",height:"300px", width:"40%", margin:"auto", marginTop:'100px', borderRadius:'30px', padding:"10px"}}>
+        <p className="font-bold pl-2 mb-6">Weather</p>
                 <div className="flex items-center justify-center flex-col border-r">
                   <div className="text-base font-normal ">
                     <p>
-                      Temperature: {hourlyWeather.temp} <span>℃</span>
+                      <b>Temperature:</b> {hourlyWeather.temp} <span>℃</span>
                     </p>
                     <p>
-                      Feels like: {hourlyWeather.feels_like} <span>℃</span>
+                    <b>Feels like:</b> {hourlyWeather.feels_like} <span>℃</span>
                     </p>
                     <p>
-                      Temperature minimum: {hourlyWeather.temp_min} <span>℃</span>
+                    <b>Temperature minimum:</b> {hourlyWeather.temp_min} <span>℃</span>
                     </p>
                     <p>
-                      Temperature maximum: {hourlyWeather.temp_max} <span>℃</span>
+                    <b>Temperature maximum:</b> {hourlyWeather.temp_max} <span>℃</span>
                     </p>
                     <p>
-                      Humidity: {hourlyWeather.humidity} <span>℃</span>
+                    <b>Humidity:</b> {hourlyWeather.humidity} <span>℃</span>
                     </p>
                     <p>
-                      Temperature: {hourlyWeather.temp} <span>℃</span>
+                      <b>Temperature:</b> {hourlyWeather.temp} <span>℃</span>
                     </p>
                   </div>
                 </div>

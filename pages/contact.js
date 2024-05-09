@@ -1,74 +1,12 @@
 import Head from "next/head";
 import { Navbar } from "@component/components/Navbar";
-import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
-import { BsStackOverflow } from "react-icons/bs";
-import Image from "next/image";
 import { useState } from "react";
-import { useToast } from "@chakra-ui/react";
-import { submitFormDocument } from "@component/lib/firebase-form";
 import { ChakraProvider } from "@chakra-ui/react";
 
 export const Contact = () => {
-  const toast = useToast();
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
-  const submitForm = async (e) => {
-    e.preventDefault();
-    const res = validateForm();
-    if (res) {
-      const result = await submitFormDocument({
-        username: username,
-        email: email,
-        message: message,
-      });
-      if (result === 0) {
-        toastUtil({
-          title: "Success",
-          desc: "Form is submitted",
-          status: "success",
-        });
-        setEmail("");
-        setUserName("");
-        setMessage("");
-      } else {
-        toastUtil({
-          title: "Error",
-          desc: "Failed to submit",
-          status: "error",
-        });
-      }
-    }
-  };
-
-  const validateForm = () => {
-    if (username == "" || email == "" || message == "") {
-      toastUtil({
-        title: "Error",
-        desc: "Email, Username and Message are required",
-        status: "error",
-      });
-    } else if (/^\S+@\S+\.\S+$/.test(email)) {
-      return true;
-    } else {
-      toastUtil({
-        title: "Error",
-        desc: "Email is not valid",
-        status: "error",
-      });
-    }
-  };
-
-  const toastUtil = ({ title, desc, status }) => {
-    toast({
-      title: title,
-      description: desc,
-      status: status,
-      duration: 9000,
-      isClosable: true,
-    });
-  };
 
   return (
     <>
@@ -85,43 +23,16 @@ export const Contact = () => {
               <div className=" text-white flex-1">
                 <h1 className="text-6xl">Contact</h1>
                 <p className="text-gray-500 pt-10 font-mono">
-                  👋 Hey Everyone! I&apos;m Peter a mobile developer, I created
-                  this website to try out Nextjs. I usually answer questions on
-                  Stack Overflow or write articles but all related to mobile
-                  development.
-                  <br />
-                  You can can find me here:
-                </p>
-                <div className="pt-8">
-                  <a href="https://stackoverflow.com/users/7015400/peter-haddad">
-                    <Image
-                      src="https://stackoverflow.com/users/flair/7015400.png"
-                      width="208"
-                      height="58"
-                      alt="profile for Peter Haddad at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
-                      title="profile for Peter Haddad at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
-                    />
-                  </a>
-                </div>
-                <div className="flex flex-row pt-16 gap-x-8 pb-4">
-                  <a href="https://github.com/peterhdd" target="_blank">
-                    <AiFillGithub size={25}></AiFillGithub>
-                  </a>
+                  👋 Hey Everyone! I&apos;m Om singh a website developer.<br/>
+                  As a MERN Stack Developer, I bring 1.5 years of web development experience in the MERN stack - MongoDB, Express.js, React, Node.js. Throughout my journey, I've contributed to various projects for both personal endeavors and corporate clients, showcasing my expertise in creating dynamic and user-friendly applications. check out my projects in project section.
 
-                  <a
-                    href="https://stackoverflow.com/users/7015400/peter-haddad"
-                    target="_blank"
-                  >
-                    <BsStackOverflow size={25}></BsStackOverflow>
-                  </a>
-                  <a href="https://twitter.com/peterndev" target="_blank">
-                    <AiOutlineTwitter size={25}> </AiOutlineTwitter>
-                  </a>
-                </div>
+In addition to my development skills, I founded a startup, providing me with valuable insights into the entrepreneurial world. Despite resource limitations, I successfully navigated challenges, including developing applications in React Native.
+                  <br />
+                </p>
+
               </div>
               <div>
                 <form
-                  onSubmit={submitForm}
                   className="px-10 pt-4 border border-gray-200 rounded-lg shadow-2xl bg-white lg:mr-10"
                 >
                   <h1 className="text-2xl -ml-10 p-4">Get in Touch</h1>
